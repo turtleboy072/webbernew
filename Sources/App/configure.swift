@@ -62,4 +62,13 @@ public func configure(
   services.register(migrations)
 
   // Configure the rest of your application here
+    let websockets = NIOWebSocketServer.default()
+    websockets.get("jimTest") { ws, req in
+        print("ws connnected")
+        ws.onText { ws, text in
+            print("ws received: \(text)")
+            ws.send("echo - \(text)")
+        }
+    }
+    services.register(websockets, as: WebSocketServer.self)
 }

@@ -1,0 +1,4 @@
+module CNIOHTTPParser {
+    umbrella "/Users/jimallan/Downloads/Server_Side_Swift_with_Vapor_v1.0.1/05-persisting-models/final/TILApp/.build/checkouts/swift-nio.git--9193785939391849715/Sources/CNIOHTTPParser/include"
+    export *
+}
